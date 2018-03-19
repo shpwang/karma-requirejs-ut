@@ -1,1 +1,1 @@
-Nothing
+mocha + karma + chai + sinon
