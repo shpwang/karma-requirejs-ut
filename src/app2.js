@@ -1,4 +1,4 @@
-define(['jquery', 'util'], ($, util) => {
+define(['util'], (util) => {
     var App2 = function (el) {
         this.el = el;
     };

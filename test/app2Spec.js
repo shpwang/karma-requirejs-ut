@@ -1,14 +1,27 @@
-define(['app2', 'jquery', 'underscore'], function (App2, $, _) {
+define(['app2', 'jquery', 'util'], function (App2, $, util) {
 
-    describe('just checking', function () {
+   describe('check app2', function () {
+        let el, sut;
+        
+        beforeEach(() => {
+            el = $('<div></div>');
+            sut = new App2(el);
+        });
 
-        it('works for app2', function () {
-            var el = $('<div></div>');
+        // afterEach(() => {
+        //     utilAppendStub.restore();
+        // });
 
-            var app2 = new App2(el);
-            app2.render();
-
+        it('Check render result', function () {
+            sut.render();
             expect(el.text()).to.equal('APP2 append: 123123utils.selfAppend: 56746538535');
+        });
+
+        it('Test util execute one time', function () {
+            var utilAppendSpy = sinon.spy(util, 'selfAppend');
+            sut.render();
+            expect(utilAppendSpy.calledOnce).to.equal(true);
+            expect(getTicketPriceStub.firstCall.args[0]).to.equal('<div><div>APP2 append: 123123</div><div>utils.selfAppend: 56746538535</div></div>');
         });
 
     });

@@ -9,7 +9,13 @@ module.exports = function (config) {
 
 
     // frameworks to use
-    frameworks: ['mocha', 'requirejs', 'chai'],
+    frameworks: ['mocha', 'requirejs', 'chai', 'sinon'],
+
+    // plugins: [
+    //   'karma-mocha',
+    //   'karma-chai',
+    //   'karma-sinon'
+    // ],
 
 
     // list of files / patterns to load in the browser
