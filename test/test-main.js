@@ -7,11 +7,12 @@ for (var file in window.__karma__.files) {
 
 requirejs.config({
     // Karma serves files from '/base'
-    baseUrl: '/base/src',
+    baseUrl: '/base/src/',
 
     paths: {
-        'jquery': '../lib/jquery/dist/jquery',
-        'underscore': '../lib/underscore/underscore',
+        'jquery': '../node_modules/jquery/dist/jquery',
+        'lodash': '../node_modules/lodash/lodash',
+        'underscore': '../node_modules/underscore/underscore',
     },
     shim: {
         'underscore': {

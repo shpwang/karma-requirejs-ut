@@ -1,8 +1,8 @@
 requirejs.config({
     paths: {
-        'jquery': '../lib/jquery/dist/jquery',
-        'lodash': '../lib/lodash/dist/lodash',
-        'underscore': '../lib/underscore/underscore'
+        'jquery': '../node_modules/jquery/dist/jquery',
+        'lodash': '../node_modules/lodash/lodash',
+        'underscore': '../node_modules/underscore/underscore'
     },
 
     shim: {
