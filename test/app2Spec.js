@@ -21,7 +21,7 @@ define(['app2', 'jquery', 'util'], function (App2, $, util) {
             var utilAppendSpy = sinon.spy(util, 'selfAppend');
             sut.render();
             expect(utilAppendSpy.calledOnce).to.equal(true);
-            expect(getTicketPriceStub.firstCall.args[0]).to.equal('<div><div>APP2 append: 123123</div><div>utils.selfAppend: 56746538535</div></div>');
+            expect(utilAppendSpy.firstCall.args[0]).to.equal('<div><div>APP2 append: 123123</div><div>utils.selfAppend: 56746538535</div></div>');
         });
 
     });
